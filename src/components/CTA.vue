@@ -12,7 +12,9 @@
           Custom Designs Are Our Specialty
         </h2>
         <p class="mt-3 text-xl text-white">
-          To learn how Modern Sign and Engraving can help your company by manufacturing customized, engraved labels or assisting with unique signage needs
+          To learn how Modern Sign and Engraving can help your company <br class="hidden sm:inline-block">
+          by manufacturing customized, engraved labels <br class="hidden sm:inline-block">
+          or assisting with unique signage needs
         </p>
         <a href="/contact"
            class="mt-8 w-full block bg-primary border border-transparent rounded-md py-3 px-8 text-base font-medium text-gray-900 hover:bg-secondary sm:w-auto hover:cursor-pointer">Contact Us</a>

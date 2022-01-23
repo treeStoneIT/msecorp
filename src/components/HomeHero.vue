@@ -6,7 +6,7 @@
         <h1 class="text-3xl font-black text-black sm:text-6xl">
           Engraved Lamacoid and ADA Signs.
         </h1>
-        <p class="mt-4 text-2xl text-gray-700">We Specialize in custom laser engraved lamacoids of all kinds for
+        <p class="mt-4 text-2xl text-gray-700">We specialize in custom laser engraved lamacoids of all kinds for
           commercial, electrical and industrial applications.</p>
       </div>
       <div class="hidden lg:block">
