@@ -50,13 +50,19 @@ export default {
           </dl>
         </div>
         <div class="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
-          <img src="/images/lamacoid-safety-sign-control-panel.jpg" alt="" class="bg-gray-100 rounded-lg"/>
+          <img src="/images/lamacoid-safety-sign-control-panel.jpg"
+               alt="lamacoid safety sign control panel"
+               class="bg-gray-100 rounded-lg"/>
           <img
               src="/images/lamacoid-nameplate-sign.jpg"
-              class="bg-gray-100 rounded-lg" alt=""/>
-          <img src="/images/lamacoid-directional-door-sign.jpg" class="bg-gray-100 rounded-lg" alt=""/>
-          <img src="/images/lamacoid-brail-ada-sign.jpg" alt="
-" class="bg-gray-100 rounded-lg"/>
+              class="bg-gray-100 rounded-lg"
+              alt="lamacoid door nameplate sign"/>
+          <img src="/images/lamacoid-directional-door-sign.jpg"
+               class="bg-gray-100 rounded-lg"
+               alt="lamacoid directional door sign"/>
+          <img src="/images/lamacoid-brail-ada-sign.jpg"
+               alt="lamacoid Brail ADA sign"
+               class="bg-gray-100 rounded-lg"/>
         </div>
       </div>
     </div>
