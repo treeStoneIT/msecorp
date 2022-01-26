@@ -16,7 +16,7 @@
 
     <!-- Contact section -->
     <section class="relative bg-white" aria-labelledby="contact-heading">
-      <div class="absolute w-full h-1/2 bg-warm-gray-50" aria-hidden="true"></div>
+      <div class="absolute w-full h-1/2 bg-gradient-to-b from-warm-gray-50" aria-hidden="true"></div>
       <!-- Decorative dot pattern -->
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <svg
@@ -98,7 +98,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                           d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                   </svg>
-                  <span class="ml-3">+1 (555) 123-4567</span>
+                  <a href="tel:+1-416-783-1487" class="ml-3">+1 (416) 783-1487</a>
                 </dd>
                 <dt><span class="sr-only">Email</span></dt>
                 <dd class="flex text-base text-gray-100">
@@ -108,7 +108,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                           d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                   </svg>
-                  <span class="ml-3">support@workcation.com</span>
+                  <a href="mailto:ben@msecorp.ca" class="ml-3">ben@msecorp.ca</a>
                 </dd>
                 <dt><span class="sr-only">Mail</span></dt>
                 <dd class="flex text-base text-gray-100">
@@ -119,8 +119,8 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                   <div class="ml-3">
-                    <span class="block">7363 Cynthia Pass</span>
-                    <span class="block">Toronto, ON N3Y 4H8</span>
+                    <span class="block">66 Sultana Ave</span>
+                    <span class="block">Toronto, ON M6A 1T1</span>
                   </div>
                 </dd>
               </dl>
