@@ -10,7 +10,7 @@ const products = [
         '<br />Common Uses:' +
         '<ul class="list-disc list-inside mt-4"><li>Electrical Labeling</li><li>Control Panel Markings</li><li>Transformer Nameplates</li></ul>',
     imageSrc: 'images/lamacoid-electrical-panel-industrial.jpg',
-    imageAlt: '',
+    imageAlt: 'lamacoid electrical panel / industrial signs',
   },
   {
     name: 'Braille (ADA Signs) ',
@@ -19,7 +19,7 @@ const products = [
         '<br />Commonly Used for:' +
         '<ul class="list-disc list-inside mt-4"><li>Washroom</li><li>Stairs</li><li>Exit</li><li>Elevator</li></ul>',
     imageSrc: 'images/lamacoid-brail-sign.jpg',
-    imageAlt: '',
+    imageAlt: 'lamacoid brail sign',
   },
   {
     name: 'Sliding Signs',
@@ -28,7 +28,7 @@ const products = [
         '<br />Commonly Used for:' +
         '<ul class="list-disc list-inside mt-4"><li>Occupied/Vacant</li><li>In Session/Available</li><li>Open/Closed</li><li>On Duty/Off Duty</li></ul>',
     imageSrc: 'images/engraved-sliding-sign.jpg',
-    imageAlt: '',
+    imageAlt: 'Engraved sliding sign',
   },
   {
     name: 'Restroom',
@@ -39,7 +39,7 @@ const products = [
         '<li>Male</li><li>Female</li><li>Male/Female</li><li>Handicapped</li><li>MF HC</li>' +
         '</ul>',
     imageSrc: 'images/lamacoid-restroom-signs.jpg',
-    imageAlt: '',
+    imageAlt: 'lamacoid  restroom / washroom signs',
   },
   {
     name: 'Directional Signs',
@@ -48,7 +48,7 @@ const products = [
         '<p class="mt-2"><strong>Room ID Signs</strong> -  Signs around your facility provide a professional finish and help avoid possible confusion. Including room signs, stairwells, corridors, turns in a hallway, these signs will surely provide staff and visitors more efficiency.</p>' +
         '<p class="mt-2"><strong>Stairwell Signs</strong> - A number on each floor is required for people to safely and easily get around your facility.</p>',
     imageSrc: 'images/direction-signs (2).jpg',
-    imageAlt: '',
+    imageAlt: 'lamacoid directional signs',
   },
 ]
 
