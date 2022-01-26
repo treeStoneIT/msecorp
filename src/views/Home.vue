@@ -50,12 +50,12 @@ export default {
           </dl>
         </div>
         <div class="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
-          <img src="/images/square-1.jpg" alt="" class="bg-gray-100 rounded-lg"/>
+          <img src="/images/lamacoid-safety-sign-control-panel.jpg" alt="" class="bg-gray-100 rounded-lg"/>
           <img
-              src="/images/stock-photo-clear-nameplate-on-the-door-with-lock-room-for-text-for-name-and-number-conceptual-photo-1592342749.jpg"
+              src="/images/lamacoid-nameplate-sign.jpg"
               class="bg-gray-100 rounded-lg" alt=""/>
-          <img src="/images/stock-photo-computer-services-office-385846015.jpg" class="bg-gray-100 rounded-lg" alt=""/>
-          <img src="/images/stock-photo-sign-for-wheelchair-accessible-entrance-to-building-1670096539.jpg" alt="
+          <img src="/images/lamacoid-directional-door-sign.jpg" class="bg-gray-100 rounded-lg" alt=""/>
+          <img src="/images/lamacoid-brail-ada-sign.jpg" alt="
 " class="bg-gray-100 rounded-lg"/>
         </div>
       </div>

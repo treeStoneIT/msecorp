@@ -3,7 +3,7 @@
   <section aria-labelledby="cause-heading">
     <div class="relative bg-gray-900 py-32 px-6 sm:py-40 sm:px-12 lg:px-16">
       <div class="absolute inset-0 overflow-hidden">
-        <img src="/images/stock-photo-laser-engraving-machine-and-engineer-with-touchpad-near-by-626712152.jpg" alt=""
+        <img src="/images/lamacoid-laser-engraving-machine.jpg" alt=""
              class="w-full h-full object-center object-cover"/>
       </div>
       <div aria-hidden="true" class="absolute inset-0 bg-gray-900 bg-opacity-50"/>

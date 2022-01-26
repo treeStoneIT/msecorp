@@ -9,7 +9,7 @@ const products = [
         'Improve safety by clearly marking control panels and valves. ' +
         '<br />Common Uses:' +
         '<ul class="list-disc list-inside mt-4"><li>Electrical Labeling</li><li>Control Panel Markings</li><li>Transformer Nameplates</li></ul>',
-    imageSrc: 'images/stock-photo-electrical-control-panel-in-factory-control-panel-786831169.jpeg',
+    imageSrc: 'images/lamacoid-electrical-panel-industrial.jpg',
     imageAlt: '',
   },
   {
@@ -18,7 +18,7 @@ const products = [
         'Braille signs are essential for individuals with visual impairments. Our braille signs enable those who are visually impaired to be just as informed as everyone else in your facility. The raised dots represent everything from alphabet to punctuation marks to ensure every individual has an equal chance of getting around easily. ' +
         '<br />Commonly Used for:' +
         '<ul class="list-disc list-inside mt-4"><li>Washroom</li><li>Stairs</li><li>Exit</li><li>Elevator</li></ul>',
-    imageSrc: 'images/stock-photo-a-person-reading-in-braille-697739977.jpg',
+    imageSrc: 'images/lamacoid-brail-sign.jpg',
     imageAlt: '',
   },
   {
@@ -27,7 +27,7 @@ const products = [
         'Sliding signs provide current status of the room in a quick and clear fashion. ' +
         '<br />Commonly Used for:' +
         '<ul class="list-disc list-inside mt-4"><li>Occupied/Vacant</li><li>In Session/Available</li><li>Open/Closed</li><li>On Duty/Off Duty</li></ul>',
-    imageSrc: 'images/stock-photo-sliding-door-signage-of-a-counselling-room-available-and-unavailable-indicator-aluminium-sign-2024852387.jpg',
+    imageSrc: 'images/engraved-sliding-sign.jpg',
     imageAlt: '',
   },
   {
@@ -35,8 +35,10 @@ const products = [
     description:
         'Symbols depicting clearly what the washroom specifications are. <br />' +
         'Common Types:' +
-        '<ul class="list-disc list-inside mt-4"><li>Male</li><li>Female</li><li>Male/Female</li><li>Handicapped</li><li>MF HC</li></ul>',
-    imageSrc: 'images/stock-vector-different-icons-for-restroom-men-woman-people-with-disability-shower-child-vector-signs-1934378597.jpg',
+        '<ul class="list-disc list-inside mt-4">' +
+        '<li>Male</li><li>Female</li><li>Male/Female</li><li>Handicapped</li><li>MF HC</li>' +
+        '</ul>',
+    imageSrc: 'images/lamacoid-restroom-signs.jpg',
     imageAlt: '',
   },
   {
