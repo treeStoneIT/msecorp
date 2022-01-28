@@ -129,25 +129,46 @@
             <!-- Contact form -->
             <div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
               <h3 class="text-lg font-medium text-warm-gray-900">Send us a message</h3>
-              <form action="#" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+              <form name="contact"
+                    method="POST"
+                    data-netlify="true"
+                    netlify-honeypot="website-field"
+                    class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                 <div>
+                  <p class="hidden">
+                    <label>
+                      Not for humans: <input name="website-field" />
+                    </label>
+                  </p>
                   <label for="first-name" class="block text-sm font-medium text-warm-gray-900">First name</label>
                   <div class="mt-1">
-                    <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+                    <input required
+                           type="text"
+                           name="first-name"
+                           id="first-name"
+                           autocomplete="given-name"
                            class="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-primary-500 focus:border-primary-500 border-warm-gray-300 rounded-md">
                   </div>
                 </div>
                 <div>
                   <label for="last-name" class="block text-sm font-medium text-warm-gray-900">Last name</label>
                   <div class="mt-1">
-                    <input type="text" name="last-name" id="last-name" autocomplete="family-name"
+                    <input required
+                           type="text"
+                           name="last-name"
+                           id="last-name"
+                           autocomplete="family-name"
                            class="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-primary-500 focus:border-primary-500 border-warm-gray-300 rounded-md">
                   </div>
                 </div>
                 <div>
                   <label for="email" class="block text-sm font-medium text-warm-gray-900">Email</label>
                   <div class="mt-1">
-                    <input id="email" name="email" type="email" autocomplete="email"
+                    <input required
+                           id="email"
+                           name="email"
+                           type="email"
+                           autocomplete="email"
                            class="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-primary-500 focus:border-primary-500 border-warm-gray-300 rounded-md">
                   </div>
                 </div>
@@ -165,17 +186,16 @@
                 <div class="sm:col-span-2">
                   <label for="subject" class="block text-sm font-medium text-warm-gray-900">Subject</label>
                   <div class="mt-1">
-                    <input type="text" name="subject" id="subject"
+                    <input type="text" name="subject" id="subject" required
                            class="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-primary-500 focus:border-primary-500 border-warm-gray-300 rounded-md">
                   </div>
                 </div>
                 <div class="sm:col-span-2">
                   <div class="flex justify-between">
                     <label for="message" class="block text-sm font-medium text-warm-gray-900">Message</label>
-                    <span id="message-max" class="text-sm text-warm-gray-500">Max. 500 characters</span>
                   </div>
                   <div class="mt-1">
-                    <textarea id="message" name="message" rows="4"
+                    <textarea id="message" name="message" rows="4" required
                               class="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-primary-500 focus:border-primary-500 border border-warm-gray-300 rounded-md"
                               aria-describedby="message-max"></textarea>
                   </div>
