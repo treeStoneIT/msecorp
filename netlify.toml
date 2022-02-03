@@ -3,11 +3,6 @@
   publish = "build_production"
   environment = { PHP_VERSION = "8.0" }
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
 # Opting your Website out of Google's FLoC Network
 [[headers]]
   for = "/*"
