@@ -2,5 +2,5 @@
 
 return [
     'production' => true,
-    'base_url' => 'https://msecorp.ca'
+    'baseUrl' => 'https://msecorp.ca'
 ];
