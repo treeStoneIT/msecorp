@@ -1,26 +1,21 @@
 {
-  "name": "msecorp",
-  "version": "0.1.0",
-  "scripts": {
-    "dev": "vite --host",
-    "build": "vite build",
-    "serve": "vite preview"
-  },
-  "dependencies": {
-    "vue": "^3.2.26",
-    "vue-router": "^4.0.12"
-  },
-  "devDependencies": {
-    "@headlessui/vue": "^1.4.2",
-    "@heroicons/vue": "^1.0.5",
-    "@tailwindcss/aspect-ratio": "^0.4.0",
-    "@tailwindcss/forms": "^0.4.0",
-    "@tailwindcss/line-clamp": "^0.3.0",
-    "@tailwindcss/typography": "^0.5.0",
-    "@types/tailwindcss": "^3.0.2",
-    "@vitejs/plugin-vue": "^2.0.1",
-    "autoprefixer": "^10.4.2",
-    "tailwindcss": "^3.0.17",
-    "vite": "^2.7.7"
-  }
+    "private": true,
+    "scripts": {
+        "dev": "mix",
+        "watch": "mix watch",
+        "staging": "NODE_ENV=staging mix",
+        "prod": "mix --production"
+    },
+    "devDependencies": {
+        "laravel-mix": "^6.0.39",
+        "laravel-mix-jigsaw": "^1.5.0",
+        "postcss": "^8.2.4",
+        "postcss-import": "^14.0.0",
+        "tailwindcss": "^3.0.18",
+        "@tailwindcss/aspect-ratio": "^0.4.0",
+        "@tailwindcss/forms": "^0.4.0",
+        "@tailwindcss/line-clamp": "^0.3.0",
+        "@tailwindcss/typography": "^0.5.0",
+        "@types/tailwindcss": "^3.0.2"
+    }
 }
