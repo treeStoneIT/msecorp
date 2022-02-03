@@ -165,8 +165,9 @@ description: Thank you for your interest in Modern Sign & Engraving. Please cont
                                             Not for humans: <input name="website-field"/>
                                         </label>
                                     </p>
-                                    <label for="first-name" class="block text-sm font-medium text-warm-gray-900">First
-                                        name</label>
+                                    <label for="first-name" class="block text-sm font-medium text-warm-gray-900">
+                                        First name
+                                    </label>
                                     <div class="mt-1">
                                         <input required
                                                type="text"
@@ -177,8 +178,9 @@ description: Thank you for your interest in Modern Sign & Engraving. Please cont
                                     </div>
                                 </div>
                                 <div>
-                                    <label for="last-name" class="block text-sm font-medium text-warm-gray-900">Last
-                                        name</label>
+                                    <label for="last-name" class="block text-sm font-medium text-warm-gray-900">
+                                        Last name
+                                    </label>
                                     <div class="mt-1">
                                         <input required
                                                type="text"
@@ -190,7 +192,9 @@ description: Thank you for your interest in Modern Sign & Engraving. Please cont
                                 </div>
                                 <div>
                                     <label for="email"
-                                           class="block text-sm font-medium text-warm-gray-900">Email</label>
+                                           class="block text-sm font-medium text-warm-gray-900">
+                                        Email
+                                    </label>
                                     <div class="mt-1">
                                         <input required
                                                id="email"
@@ -203,7 +207,9 @@ description: Thank you for your interest in Modern Sign & Engraving. Please cont
                                 <div>
                                     <div class="flex justify-between">
                                         <label for="phone"
-                                               class="block text-sm font-medium text-warm-gray-900">Phone</label>
+                                               class="block text-sm font-medium text-warm-gray-900">
+                                            Phone
+                                        </label>
                                         <span id="phone-optional" class="text-sm text-warm-gray-500">Optional</span>
                                     </div>
                                     <div class="mt-1">
@@ -214,7 +220,9 @@ description: Thank you for your interest in Modern Sign & Engraving. Please cont
                                 </div>
                                 <div class="sm:col-span-2">
                                     <label for="subject"
-                                           class="block text-sm font-medium text-warm-gray-900">Subject</label>
+                                           class="block text-sm font-medium text-warm-gray-900">
+                                        Subject
+                                    </label>
                                     <div class="mt-1">
                                         <input type="text" name="subject" id="subject" required
                                                class="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-primary-500 focus:border-primary-500 border-warm-gray-300 rounded-md">
