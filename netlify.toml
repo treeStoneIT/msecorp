@@ -8,3 +8,9 @@
   for = "/*"
   [headers.values]
     Permissions-Policy = "interest-cohort=()"
+
+[[redirects]]
+  from = "https://msecorp.ca"
+  to = "https://modernsign.ca"
+  status = 301
+  force = true
