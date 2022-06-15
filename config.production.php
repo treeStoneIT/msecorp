@@ -2,5 +2,5 @@
 
 return [
     'production' => true,
-    'baseUrl' => 'https://msecorp.ca'
+    'baseUrl' => 'https://modernsign.ca'
 ];

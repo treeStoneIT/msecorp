@@ -127,7 +127,7 @@ description: Thank you for your interest in Modern Sign & Engraving. Please cont
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                               d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                                     </svg>
-                                    <a href="mailto:ben@msecorp.ca" class="ml-3">ben@msecorp.ca</a>
+                                    <a href="mailto:ben@modernsign.ca" class="ml-3">ben@modernsign.ca</a>
                                 </dd>
                                 <dt><span class="sr-only">Mail</span></dt>
                                 <dd class="flex text-base text-gray-50">
