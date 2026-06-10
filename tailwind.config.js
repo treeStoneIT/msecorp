@@ -4,9 +4,11 @@ const colors = require('tailwindcss/colors')
 /** @type {import("@types/tailwindcss/tailwind-config").TailwindConfig } */
 
 module.exports = {
-  content: require('fast-glob').sync([
-    './**/*.php'
-  ]),
+  content: [
+    './source/**/*.blade.php',
+    './source/**/*.php',
+    './config.php',
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -36,7 +38,6 @@ module.exports = {
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
-    require('@tailwindcss/line-clamp'),
     require('@tailwindcss/aspect-ratio'),
   ],
 };
