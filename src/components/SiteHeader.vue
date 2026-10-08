@@ -1,9 +1,10 @@
 <script setup>
-import { ref, watch } from 'vue'
+import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { products } from '@/data/products.js'
 import { business } from '@/data/business.js'
 import AppIcon from './AppIcon.vue'
+import SiteImage from './SiteImage.vue'
 
 const route = useRoute()
 const mobileOpen = ref(false)
@@ -16,6 +17,42 @@ watch(
     productsOpen.value = false
   },
 )
+
+const productsMenu = ref(null)
+let closeTimer
+let hoverOpenedAt = 0
+
+const openProducts = (event) => {
+  if (event.pointerType !== 'mouse') return
+  clearTimeout(closeTimer)
+  if (!productsOpen.value) hoverOpenedAt = Date.now()
+  productsOpen.value = true
+}
+const scheduleClose = (event) => {
+  if (event.pointerType !== 'mouse') return
+  clearTimeout(closeTimer)
+  closeTimer = setTimeout(() => (productsOpen.value = false), 250)
+}
+const toggleProducts = () => {
+  if (productsOpen.value && Date.now() - hoverOpenedAt < 600) return
+  productsOpen.value = !productsOpen.value
+}
+const onDocumentClick = (event) => {
+  if (productsMenu.value && !productsMenu.value.contains(event.target)) productsOpen.value = false
+}
+const onKeydown = (event) => {
+  if (event.key === 'Escape') productsOpen.value = false
+}
+
+onMounted(() => {
+  document.addEventListener('click', onDocumentClick)
+  document.addEventListener('keydown', onKeydown)
+})
+onBeforeUnmount(() => {
+  clearTimeout(closeTimer)
+  document.removeEventListener('click', onDocumentClick)
+  document.removeEventListener('keydown', onKeydown)
+})
 
 const isProductRoute = (path) => path === '/products' || products.some((p) => path === `/${p.slug}`)
 </script>
@@ -30,34 +67,44 @@ const isProductRoute = (path) => path === '/products' || products.some((p) => pa
       </div>
 
       <div class="flex items-center gap-x-8 max-lg:hidden">
-        <div class="relative" @mouseleave="productsOpen = false">
+        <div ref="productsMenu" class="relative" @pointerenter="openProducts" @pointerleave="scheduleClose">
           <button
             type="button"
-            class="flex items-center gap-x-1 text-sm/6 font-medium hover:text-zinc-950"
-            :class="isProductRoute(route.path) ? 'text-zinc-950' : 'text-zinc-600'"
+            class="flex items-center gap-x-1 py-6 text-sm/6 font-medium hover:text-zinc-950"
+            :class="isProductRoute(route.path) || productsOpen ? 'text-zinc-950' : 'text-zinc-600'"
             :aria-expanded="productsOpen"
             aria-controls="products-menu"
-            @click="productsOpen = !productsOpen"
-            @mouseenter="productsOpen = true"
+            @click="toggleProducts"
           >
             Products
-            <AppIcon name="chevron-down" class="size-5 shrink-0 fill-zinc-400" />
+            <AppIcon name="chevron-down" class="size-5 shrink-0 fill-zinc-400 transition-transform" :class="productsOpen ? 'rotate-180' : ''" />
           </button>
-          <div v-show="productsOpen" id="products-menu" class="absolute top-full -left-8 w-96 pt-3">
-            <div class="rounded-2xl bg-white p-2 shadow-lg ring-1 ring-zinc-950/5">
-              <RouterLink
-                v-for="product in products"
-                :key="product.slug"
-                :to="`/${product.slug}`"
-                class="block rounded-lg px-4 py-3 hover:bg-zinc-50"
-              >
-                <p class="text-sm/6 font-medium text-zinc-950">{{ product.navName }}</p>
-                <p class="text-sm/6 text-zinc-600">{{ product.summary }}</p>
-              </RouterLink>
-              <RouterLink to="/products" class="mt-1 flex items-center gap-x-2 rounded-lg px-4 py-3 text-sm/6 font-medium text-brand-700 hover:bg-zinc-50">
-                All product lines
-                <AppIcon name="arrow-right" class="size-4 shrink-0 fill-current" />
-              </RouterLink>
+          <div v-show="productsOpen" id="products-menu" class="absolute top-full left-1/2 w-[36rem] -translate-x-1/3">
+            <div class="overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-zinc-950/5">
+              <ul role="list" class="grid grid-cols-2 gap-1 p-3">
+                <li v-for="product in products" :key="product.slug">
+                  <RouterLink
+                    :to="`/${product.slug}`"
+                    class="flex items-center gap-x-4 rounded-xl p-3 hover:bg-zinc-50"
+                    :class="route.path === `/${product.slug}` ? 'bg-zinc-50' : ''"
+                  >
+                    <span class="flex size-14 shrink-0 items-center justify-center rounded-lg bg-zinc-100 p-1.5 ring-1 ring-zinc-950/5">
+                      <SiteImage :slug="product.image.slug" sizes="56px" class="max-h-full w-auto max-w-full rounded-sm" />
+                    </span>
+                    <span class="text-sm/6 font-medium text-zinc-950">{{ product.navName }}</span>
+                  </RouterLink>
+                </li>
+              </ul>
+              <div class="flex items-center justify-between gap-x-6 bg-zinc-50 px-6 py-4">
+                <RouterLink to="/products" class="flex items-center gap-x-2 text-sm/6 font-medium text-zinc-950 hover:text-brand-700">
+                  All product lines
+                  <AppIcon name="arrow-right" class="size-4 shrink-0 fill-current" />
+                </RouterLink>
+                <p class="text-sm/6 text-zinc-600">
+                  Need something custom?
+                  <RouterLink to="/contact" class="font-medium text-brand-700 hover:text-brand-600">Ask for a quote</RouterLink>
+                </p>
+              </div>
             </div>
           </div>
         </div>
