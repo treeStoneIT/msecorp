@@ -1,7 +1,9 @@
 [build]
-  command = "npm run prod"
-  publish = "build_production"
-  environment = { PHP_VERSION = "8.0" }
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
 
 # Opting your Website out of Google's FLoC Network
 [[headers]]
