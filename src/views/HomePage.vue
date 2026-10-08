@@ -14,6 +14,12 @@ useSeo({
   jsonLd: [localBusinessSchema()],
 })
 
+const heroColumns = [
+  ['img-4248', 'img-4250', 'img-4279'],
+  ['img-4270', 'img-4269', 'img-4282', 'img-4283'],
+  ['img-4278', 'img-4267', 'img-4285', 'img-4258'],
+]
+
 const gridProducts = products.filter((p) => p.slug !== 'custom-engraving')
 
 const highlights = [
@@ -53,8 +59,8 @@ const work = [
 
 <template>
   <section class="relative isolate overflow-hidden bg-zinc-100 bg-[repeating-linear-gradient(0deg,rgb(255_255_255/0.5)_0_1px,transparent_1px_3px)]">
-    <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 py-20 sm:py-28 lg:grid-cols-2 lg:px-8">
-      <div>
+    <div class="mx-auto max-w-7xl px-6 pt-16 pb-20 sm:pt-24 lg:px-8 lg:py-40">
+      <div class="lg:max-w-lg">
         <p class="text-base/7 font-semibold text-brand-700 sm:text-sm/6">Toronto sign &amp; engraving shop since {{ business.foundingYear }}</p>
         <h1 class="mt-4 max-w-[24ch] text-5xl font-semibold tracking-tight text-balance text-zinc-950 sm:text-6xl">Engraved lamacoid, braille and safety signs</h1>
         <p class="mt-6 max-w-[48ch] text-lg/8 text-pretty text-zinc-700">
@@ -65,15 +71,22 @@ const work = [
           <RouterLink to="/products" class="text-base/7 font-semibold text-zinc-950 sm:text-sm/6">See our products <span aria-hidden="true">&rarr;</span></RouterLink>
         </div>
       </div>
-      <div class="grid grid-cols-2 gap-4 sm:gap-6">
-        <div class="flex flex-col gap-4 sm:gap-6">
-          <SiteImage slug="img-4250" eager sizes="(min-width: 1024px) 300px, 50vw" alt="Accessible all-gender washroom sign" class="aspect-square w-full rounded-2xl object-cover shadow-lg ring-1 ring-zinc-950/5" />
-          <SiteImage slug="img-4257" eager sizes="(min-width: 1024px) 300px, 50vw" alt="Stair B sign" class="aspect-[3/1] w-full rounded-2xl object-cover shadow-lg ring-1 ring-zinc-950/5" />
-        </div>
-        <div class="flex flex-col gap-4 pt-12 sm:gap-6">
-          <SiteImage slug="img-4270" eager sizes="(min-width: 1024px) 300px, 50vw" alt="Electrical room and fire panel sign" class="aspect-[4/3] w-full rounded-2xl object-cover shadow-lg ring-1 ring-zinc-950/5" />
-          <SiteImage slug="img-4269" eager sizes="(min-width: 1024px) 300px, 50vw" alt="Universal restroom sign with braille" class="aspect-[4/5] w-full rounded-2xl object-cover shadow-lg ring-1 ring-zinc-950/5" />
-        </div>
+      <ul role="list" aria-hidden="true" class="-mx-6 mt-12 flex gap-4 overflow-x-auto px-6 pb-2 lg:hidden">
+        <li v-for="slug in heroColumns.flat()" :key="slug" class="shrink-0">
+          <SiteImage :slug="slug" sizes="200px" class="h-36 w-auto rounded-xl shadow-md ring-1 ring-zinc-950/5" />
+        </li>
+      </ul>
+    </div>
+    <div aria-hidden="true" class="pointer-events-none absolute inset-y-0 left-1/2 hidden translate-x-8 items-center gap-8 lg:flex">
+      <div v-for="(column, index) in heroColumns" :key="index" class="flex w-44 shrink-0 flex-col gap-8">
+        <SiteImage
+          v-for="slug in column"
+          :key="slug"
+          :slug="slug"
+          eager
+          sizes="176px"
+          class="h-auto w-full rounded-xl shadow-lg ring-1 ring-zinc-950/5"
+        />
       </div>
     </div>
   </section>
@@ -86,7 +99,7 @@ const work = [
       </p>
       <ul role="list" class="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
         <li v-for="product in gridProducts" :key="product.slug" class="group relative">
-          <SiteImage :slug="product.image.slug" sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw" class="aspect-[3/2] w-full rounded-2xl bg-zinc-100 object-cover outline-1 -outline-offset-1 outline-black/5" />
+          <SiteImage :slug="product.image.slug" sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw" class="aspect-[3/2] w-full rounded-2xl bg-zinc-100 object-contain p-6 outline-1 -outline-offset-1 outline-black/5" />
           <h3 class="mt-6 text-lg/7 font-semibold text-zinc-950">
             <RouterLink :to="`/${product.slug}`"><span class="absolute inset-0"></span>{{ product.name }}</RouterLink>
           </h3>
@@ -123,7 +136,7 @@ const work = [
         </dl>
       </div>
       <div class="grid grid-cols-2 content-start gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-2 xl:grid-cols-3">
-        <SiteImage v-for="photo in work" :key="photo.slug" :slug="photo.slug" :alt="photo.alt" sizes="(min-width: 1024px) 200px, 33vw" class="aspect-square w-full rounded-2xl object-cover outline-1 -outline-offset-1 outline-black/5" />
+        <SiteImage v-for="photo in work" :key="photo.slug" :slug="photo.slug" :alt="photo.alt" sizes="(min-width: 1024px) 200px, 33vw" class="aspect-square w-full rounded-2xl object-contain p-3 bg-zinc-100 outline-1 -outline-offset-1 outline-black/5" />
       </div>
     </div>
   </section>

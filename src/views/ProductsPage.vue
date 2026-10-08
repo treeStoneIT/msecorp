@@ -23,14 +23,18 @@ useSeo({
       </p>
       <ul role="list" class="mt-16 flex flex-col gap-y-16">
         <li v-for="(product, index) in products" :key="product.slug" class="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-16">
-          <SiteImage
-            :slug="product.image.slug"
-            :alt="product.image.alt"
-            :eager="index === 0"
-            sizes="(min-width: 1024px) 600px, 100vw"
-            class="aspect-[3/2] w-full rounded-3xl bg-zinc-100 object-cover outline-1 -outline-offset-1 outline-black/5"
+          <div
+            class="flex aspect-[3/2] items-center justify-center rounded-3xl bg-zinc-100 p-6 outline-1 -outline-offset-1 outline-black/5 sm:p-10"
             :class="index % 2 ? 'lg:order-last' : ''"
-          />
+          >
+            <SiteImage
+              :slug="product.image.slug"
+              :alt="product.image.alt"
+              :eager="index === 0"
+              sizes="(min-width: 1024px) 520px, 90vw"
+              class="h-auto max-h-full w-auto max-w-full rounded-xl shadow-lg ring-1 ring-zinc-950/5"
+            />
+          </div>
           <div>
             <p class="text-base/7 font-semibold text-brand-700 sm:text-sm/6">{{ product.eyebrow }}</p>
             <h2 class="mt-2 text-3xl font-semibold tracking-tight text-balance text-zinc-950">{{ product.name }}</h2>
