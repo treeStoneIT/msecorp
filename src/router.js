@@ -21,4 +21,9 @@ export const routes = [
     name: 'contact',
     component: () => import('./views/ContactPage.vue'),
   },
+  {
+    path: '/404',
+    name: 'not-found',
+    component: () => import('./views/NotFoundPage.vue'),
+  },
 ]
