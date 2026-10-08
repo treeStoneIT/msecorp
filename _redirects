@@ -1,3 +1,0 @@
-# http and https need separate rules if you don’t force_ssl!
-https://msecorp.ca/* https://modernsign.ca/:splat 301!
-https://www.msecorp.ca/* https://modernsign.ca/:splat 301!
