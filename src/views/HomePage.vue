@@ -15,7 +15,6 @@ useSeo({
 })
 
 const gridProducts = products.filter((p) => p.slug !== 'custom-engraving')
-const years = new Date().getFullYear() - business.foundingYear
 
 const highlights = [
   {
@@ -53,84 +52,31 @@ const work = [
 </script>
 
 <template>
-  <div data-uidotsh-pick="Hero style" class="contents">
-    <div data-uidotsh-option="Brushed steel" class="contents">
-      <section class="relative isolate overflow-hidden bg-zinc-100 bg-[repeating-linear-gradient(0deg,rgb(255_255_255/0.5)_0_1px,transparent_1px_3px)]">
-        <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 py-20 sm:py-28 lg:grid-cols-2 lg:px-8">
-          <div>
-            <p class="text-base/7 font-semibold text-brand-700 sm:text-sm/6">Toronto sign &amp; engraving shop since {{ business.foundingYear }}</p>
-            <h1 class="mt-4 max-w-[24ch] text-5xl font-semibold tracking-tight text-balance text-zinc-950 sm:text-6xl">Engraved lamacoid, braille and safety signs</h1>
-            <p class="mt-6 max-w-[48ch] text-lg/8 text-pretty text-zinc-700">
-              Custom laser engraved lamacoids of all kinds for commercial, electrical and industrial applications, made to your exact size, colour and wording.
-            </p>
-            <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
-              <RouterLink to="/contact" class="rounded-full bg-brand-500 px-4 py-2.5 text-base/7 font-semibold text-zinc-950 hover:bg-brand-400 sm:text-sm/6">Request a quote</RouterLink>
-              <RouterLink to="/products" class="text-base/7 font-semibold text-zinc-950 sm:text-sm/6">See our products <span aria-hidden="true">&rarr;</span></RouterLink>
-            </div>
-          </div>
-          <div class="grid grid-cols-2 gap-4 sm:gap-6">
-            <div class="flex flex-col gap-4 sm:gap-6">
-              <SiteImage slug="img-4250" eager sizes="(min-width: 1024px) 300px, 50vw" alt="Accessible all-gender washroom sign" class="aspect-square w-full rounded-2xl object-cover shadow-lg ring-1 ring-zinc-950/5" />
-              <SiteImage slug="img-4257" eager sizes="(min-width: 1024px) 300px, 50vw" alt="Stair B sign" class="aspect-[3/1] w-full rounded-2xl object-cover shadow-lg ring-1 ring-zinc-950/5" />
-            </div>
-            <div class="flex flex-col gap-4 pt-12 sm:gap-6">
-              <SiteImage slug="img-4270" eager sizes="(min-width: 1024px) 300px, 50vw" alt="Electrical room and fire panel sign" class="aspect-[4/3] w-full rounded-2xl object-cover shadow-lg ring-1 ring-zinc-950/5" />
-              <SiteImage slug="img-4269" eager sizes="(min-width: 1024px) 300px, 50vw" alt="Universal restroom sign with braille" class="aspect-[4/5] w-full rounded-2xl object-cover shadow-lg ring-1 ring-zinc-950/5" />
-            </div>
-          </div>
+  <section class="relative isolate overflow-hidden bg-zinc-100 bg-[repeating-linear-gradient(0deg,rgb(255_255_255/0.5)_0_1px,transparent_1px_3px)]">
+    <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 py-20 sm:py-28 lg:grid-cols-2 lg:px-8">
+      <div>
+        <p class="text-base/7 font-semibold text-brand-700 sm:text-sm/6">Toronto sign &amp; engraving shop since {{ business.foundingYear }}</p>
+        <h1 class="mt-4 max-w-[24ch] text-5xl font-semibold tracking-tight text-balance text-zinc-950 sm:text-6xl">Engraved lamacoid, braille and safety signs</h1>
+        <p class="mt-6 max-w-[48ch] text-lg/8 text-pretty text-zinc-700">
+          Custom laser engraved lamacoids of all kinds for commercial, electrical and industrial applications, made to your exact size, colour and wording.
+        </p>
+        <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
+          <RouterLink to="/contact" class="rounded-full bg-brand-500 px-4 py-2.5 text-base/7 font-semibold text-zinc-950 hover:bg-brand-400 sm:text-sm/6">Request a quote</RouterLink>
+          <RouterLink to="/products" class="text-base/7 font-semibold text-zinc-950 sm:text-sm/6">See our products <span aria-hidden="true">&rarr;</span></RouterLink>
         </div>
-      </section>
-    </div>
-
-    <div data-uidotsh-option="Shop floor (dark)" class="contents" hidden>
-      <section class="relative isolate overflow-hidden bg-zinc-950">
-        <SiteImage slug="lamacoid-laser-engraving-machine" eager sizes="100vw" class="absolute inset-0 -z-10 size-full object-cover opacity-40" />
-        <div class="absolute inset-0 -z-10 bg-linear-to-r from-zinc-950 via-zinc-950/80 to-zinc-950/20"></div>
-        <div class="mx-auto max-w-7xl px-6 py-24 sm:py-36 lg:px-8">
-          <p class="text-base/7 font-semibold text-brand-400 sm:text-sm/6">Toronto sign &amp; engraving shop since {{ business.foundingYear }}</p>
-          <h1 class="mt-4 max-w-[20ch] text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl">Engraved lamacoid, braille and safety signs</h1>
-          <p class="mt-6 max-w-[48ch] text-lg/8 text-pretty text-zinc-300">
-            Custom laser engraved lamacoids of all kinds for commercial, electrical and industrial applications, made to your exact size, colour and wording.
-          </p>
-          <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
-            <RouterLink to="/contact" class="rounded-full bg-brand-500 px-4 py-2.5 text-base/7 font-semibold text-zinc-950 hover:bg-brand-400 sm:text-sm/6">Request a quote</RouterLink>
-            <RouterLink to="/products" class="text-base/7 font-semibold text-white sm:text-sm/6">See our products <span aria-hidden="true">&rarr;</span></RouterLink>
-          </div>
-          <dl class="mt-20 grid max-w-2xl grid-cols-3 gap-8 border-t border-white/10 pt-8">
-            <div><dt class="text-sm/6 text-zinc-400">Years in business</dt><dd class="mt-1 text-3xl font-semibold tracking-tight text-white tabular-nums">{{ years }}+</dd></div>
-            <div><dt class="text-sm/6 text-zinc-400">Product lines</dt><dd class="mt-1 text-3xl font-semibold tracking-tight text-white tabular-nums">{{ products.length }}</dd></div>
-            <div><dt class="text-sm/6 text-zinc-400">Based in</dt><dd class="mt-1 text-3xl font-semibold tracking-tight text-white">Toronto</dd></div>
-          </dl>
+      </div>
+      <div class="grid grid-cols-2 gap-4 sm:gap-6">
+        <div class="flex flex-col gap-4 sm:gap-6">
+          <SiteImage slug="img-4250" eager sizes="(min-width: 1024px) 300px, 50vw" alt="Accessible all-gender washroom sign" class="aspect-square w-full rounded-2xl object-cover shadow-lg ring-1 ring-zinc-950/5" />
+          <SiteImage slug="img-4257" eager sizes="(min-width: 1024px) 300px, 50vw" alt="Stair B sign" class="aspect-[3/1] w-full rounded-2xl object-cover shadow-lg ring-1 ring-zinc-950/5" />
         </div>
-      </section>
-    </div>
-
-    <div data-uidotsh-option="Bento grid" class="contents" hidden>
-      <section class="bg-white">
-        <div class="mx-auto max-w-7xl px-6 pt-16 pb-20 sm:pt-24 lg:px-8">
-          <div class="grid grid-cols-1 items-end gap-8 lg:grid-cols-2">
-            <h1 class="max-w-[24ch] text-5xl font-semibold tracking-tight text-balance text-zinc-950 sm:text-6xl">Engraved lamacoid, braille and safety signs</h1>
-            <div>
-              <p class="max-w-[48ch] text-lg/8 text-pretty text-zinc-600">
-                Custom laser engraved lamacoids of all kinds for commercial, electrical and industrial applications. Made in Toronto since {{ business.foundingYear }}.
-              </p>
-              <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
-                <RouterLink to="/contact" class="rounded-full bg-brand-500 px-4 py-2.5 text-base/7 font-semibold text-zinc-950 hover:bg-brand-400 sm:text-sm/6">Request a quote</RouterLink>
-                <RouterLink to="/products" class="text-base/7 font-semibold text-zinc-950 sm:text-sm/6">See our products <span aria-hidden="true">&rarr;</span></RouterLink>
-              </div>
-            </div>
-          </div>
-          <div class="mt-16 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4 lg:grid-rows-2">
-            <SiteImage slug="img-4270" eager sizes="(min-width: 1024px) 600px, 100vw" alt="Electrical room and fire panel sign" class="col-span-2 size-full rounded-2xl object-cover lg:row-span-2" />
-            <SiteImage slug="img-4269" eager sizes="(min-width: 1024px) 300px, 50vw" alt="Universal restroom sign with braille" class="aspect-square size-full rounded-2xl object-cover" />
-            <SiteImage slug="img-4278" eager sizes="(min-width: 1024px) 300px, 50vw" alt="Live wires warning sign" class="aspect-square size-full rounded-2xl object-cover" />
-            <SiteImage slug="img-4267" sizes="(min-width: 1024px) 300px, 50vw" alt="12 floor stair A sign" class="aspect-square size-full rounded-2xl object-cover" />
-            <SiteImage slug="img-4283" sizes="(min-width: 1024px) 300px, 50vw" alt="Transformer lamacoid label" class="aspect-square size-full rounded-2xl object-cover" />
-          </div>
+        <div class="flex flex-col gap-4 pt-12 sm:gap-6">
+          <SiteImage slug="img-4270" eager sizes="(min-width: 1024px) 300px, 50vw" alt="Electrical room and fire panel sign" class="aspect-[4/3] w-full rounded-2xl object-cover shadow-lg ring-1 ring-zinc-950/5" />
+          <SiteImage slug="img-4269" eager sizes="(min-width: 1024px) 300px, 50vw" alt="Universal restroom sign with braille" class="aspect-[4/5] w-full rounded-2xl object-cover shadow-lg ring-1 ring-zinc-950/5" />
         </div>
-      </section>
+      </div>
     </div>
-  </div>
+  </section>
 
   <section class="py-16 sm:py-24">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
