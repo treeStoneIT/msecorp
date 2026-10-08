@@ -7,6 +7,8 @@ import SiteImage from '@/components/SiteImage.vue'
 import AppIcon from '@/components/AppIcon.vue'
 import FaqList from '@/components/FaqList.vue'
 import CtaSection from '@/components/CtaSection.vue'
+import SignSample from '@/components/SignSample.vue'
+import { samples as allSamples } from '@/data/samples.js'
 
 const props = defineProps({ slug: { type: String, required: true } })
 const product = findProduct(props.slug)
@@ -28,6 +30,8 @@ useSeo({
     faqSchema(product.faqs),
   ],
 })
+
+const samples = allSamples[product.slug] || []
 
 const related = computed(() => products.filter((p) => p.slug !== product.slug).slice(0, 3))
 </script>
@@ -82,14 +86,28 @@ const related = computed(() => products.filter((p) => p.slug !== product.slug).s
     </div>
   </section>
 
-  <section v-if="product.gallery.length" class="py-16 sm:py-24">
+  <section v-if="product.gallery.length || samples.length" class="py-16 sm:py-24">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <h2 class="text-3xl font-semibold tracking-tight text-balance text-zinc-950">Examples</h2>
-      <ul role="list" class="mt-10 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+      <ul v-if="product.gallery.length" role="list" class="mt-10 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
         <li v-for="photo in product.gallery" :key="photo.slug">
           <SiteImage :slug="photo.slug" :alt="photo.alt" sizes="(min-width: 1024px) 300px, 50vw" class="aspect-square w-full rounded-2xl bg-zinc-100 object-contain p-4 outline-1 -outline-offset-1 outline-black/5" />
         </li>
       </ul>
+      <div v-if="samples.length" class="mt-16">
+        <h3 class="text-lg/7 font-semibold text-zinc-950">Sample layouts</h3>
+        <p class="mt-2 max-w-[60ch] text-base/7 text-pretty text-zinc-600 sm:text-sm/6">
+          A few common wordings and colour combinations to get you started. Every sign is made to order with your text, size and colours.
+        </p>
+        <ul role="list" class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <li v-for="(sample, index) in samples" :key="index">
+            <div class="flex aspect-[3/2] items-center justify-center rounded-2xl bg-zinc-100 p-8 outline-1 -outline-offset-1 outline-black/5">
+              <SignSample :sample="sample" />
+            </div>
+            <p class="mt-3 text-sm/6 text-zinc-600">{{ sample.caption }}</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

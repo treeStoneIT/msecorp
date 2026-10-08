@@ -77,7 +77,6 @@ export const products = [
     gallery: [
       { slug: 'shutterstock-1670096539', alt: 'Blue accessible entrance sign with the dynamic accessibility symbol' },
       { slug: 'shutterstock-697739977', alt: 'Finger reading braille on a tactile sign' },
-      { slug: 'img-4250', alt: 'Brushed aluminium all-gender accessible washroom sign' },
     ],
     usesHeading: 'Commonly used for',
     uses: ['Washrooms', 'Stairwells and floor numbers', 'Exits', 'Elevators', 'Room and suite IDs', 'Accessible entrances'],
@@ -131,6 +130,7 @@ export const products = [
       { slug: 'img-4270', alt: 'Red engraved sign reading access to the electrical room and fire panel' },
       { slug: 'img-4281', alt: 'White engraved sign reading fire door keep closed' },
       { slug: 'img-4262', alt: 'Brushed aluminium sign reading emergency exit keep clear' },
+      { slug: 'img-4282', alt: 'Red fire pump breaker sign warning not to adjust' },
     ],
     usesHeading: 'Common signs',
     uses: [
@@ -183,7 +183,7 @@ export const products = [
     intro:
       'Sliding signs provide the current status of a room quickly and clearly. One slide tells staff and visitors whether a room is free, so nobody has to knock or interrupt a meeting.',
     image: { slug: 'shutterstock-2024852387', alt: 'Engraved counselling room door sign with an available slider' },
-    gallery: [{ slug: 'engraved-sliding-sign', alt: 'Engraved sliding door sign' }],
+    gallery: [],
     usesHeading: 'Commonly used for',
     uses: ['Occupied / Vacant', 'In Session / Available', 'Open / Closed', 'On Duty / Off Duty', 'In / Out'],
     options: [
@@ -330,6 +330,7 @@ export const products = [
       { slug: 'engrave-lasers', alt: 'Laser engraving in progress' },
       { slug: 'img-4253', alt: 'Large brushed aluminium number 3 sign' },
       { slug: 'img-4288', alt: 'Large white number 8 sign' },
+      { slug: 'direction-signs-2', alt: 'Assortment of custom engraved signs in brushed aluminium, red and white' },
     ],
     usesHeading: 'What we can make',
     uses: [
