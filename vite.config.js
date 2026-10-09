@@ -44,6 +44,7 @@ export default {
     script: 'async',
     beastiesOptions: {
       preload: 'media',
+      inlineThreshold: 40000,
     },
   },
 }
