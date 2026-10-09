@@ -8,17 +8,31 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="preconnect" href="https://rsms.me/" />
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="preload" href="/fonts/inter-latin-wght.woff2" as="font" type="font/woff2" crossorigin />
     <title>Modern Sign &amp; Engraving Corp</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0ZF7BYJ1BE"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
       gtag('config', 'G-0ZF7BYJ1BE');
+
+      function loadGtag() {
+        if (window._gtagLoaded) return;
+        window._gtagLoaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-0ZF7BYJ1BE';
+        document.head.appendChild(s);
+      }
+      window.addEventListener('load', function () {
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(loadGtag, { timeout: 3000 });
+        } else {
+          setTimeout(loadGtag, 3000);
+        }
+      });
     </script>
   </head>
   <body class="antialiased">

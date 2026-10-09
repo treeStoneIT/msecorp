@@ -36,7 +36,7 @@ const values = [
           <p>We are known for our personal customer service and reliability.</p>
         </div>
       </div>
-      <SiteImage slug="engrave-lasers" alt="Laser engraving in progress" eager sizes="(min-width: 1024px) 600px, 100vw" class="aspect-[4/3] w-full rounded-3xl bg-zinc-100 object-cover outline-1 -outline-offset-1 outline-black/5" />
+      <SiteImage slug="engrave-lasers" alt="Laser engraving in progress" eager sizes="(min-width: 1024px) 600px, 85vw" class="aspect-[4/3] w-full rounded-3xl bg-zinc-100 object-cover outline-1 -outline-offset-1 outline-black/5" />
     </div>
   </section>
   <section class="bg-zinc-50 py-16 sm:py-24">

@@ -83,7 +83,6 @@ const work = [
           v-for="slug in column"
           :key="slug"
           :slug="slug"
-          eager
           sizes="176px"
           class="h-auto w-full rounded-xl shadow-lg ring-1 ring-zinc-950/5"
         />
@@ -99,7 +98,7 @@ const work = [
       </p>
       <ul role="list" class="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
         <li v-for="product in gridProducts" :key="product.slug" class="group relative">
-          <SiteImage :slug="product.image.slug" sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw" class="aspect-[3/2] w-full rounded-2xl bg-zinc-100 object-contain p-6 outline-1 -outline-offset-1 outline-black/5" />
+          <SiteImage :slug="product.image.slug" sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 85vw" class="aspect-[3/2] w-full rounded-2xl bg-zinc-100 object-contain p-6 outline-1 -outline-offset-1 outline-black/5" />
           <h3 class="mt-6 text-lg/7 font-semibold text-zinc-950">
             <RouterLink :to="`/${product.slug}`"><span class="absolute inset-0"></span>{{ product.name }}</RouterLink>
           </h3>
@@ -107,7 +106,7 @@ const work = [
         </li>
       </ul>
       <div class="group relative mt-16 grid grid-cols-1 items-center gap-8 rounded-3xl bg-zinc-950 p-6 sm:p-10 lg:grid-cols-2 lg:gap-16">
-        <SiteImage slug="shutterstock-626712152" alt="Laser engraving machine head over a workpiece" sizes="(min-width: 1024px) 560px, 100vw" class="aspect-[3/2] w-full rounded-2xl object-cover" />
+        <SiteImage slug="shutterstock-626712152" alt="Laser engraving machine head over a workpiece" sizes="(min-width: 1024px) 560px, 88vw" class="aspect-[3/2] w-full rounded-2xl object-cover" />
         <div>
           <h3 class="text-3xl font-semibold tracking-tight text-balance text-white">
             <RouterLink to="/custom-engraving"><span class="absolute inset-0"></span>Something else in mind?</RouterLink>
@@ -136,7 +135,7 @@ const work = [
         </dl>
       </div>
       <div class="grid grid-cols-2 content-start gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-2 xl:grid-cols-3">
-        <SiteImage v-for="photo in work" :key="photo.slug" :slug="photo.slug" :alt="photo.alt" sizes="(min-width: 1024px) 200px, 33vw" class="aspect-square w-full rounded-2xl object-contain p-3 bg-zinc-100 outline-1 -outline-offset-1 outline-black/5" />
+        <SiteImage v-for="photo in work" :key="photo.slug" :slug="photo.slug" :alt="photo.alt" sizes="(min-width: 1024px) 200px, (min-width: 640px) 33vw, 42vw" class="aspect-square w-full rounded-2xl object-contain p-3 bg-zinc-100 outline-1 -outline-offset-1 outline-black/5" />
       </div>
     </div>
   </section>

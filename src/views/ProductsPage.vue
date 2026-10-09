@@ -31,7 +31,7 @@ useSeo({
               :slug="product.image.slug"
               :alt="product.image.alt"
               :eager="index === 0"
-              sizes="(min-width: 1024px) 520px, 90vw"
+              sizes="(min-width: 1024px) 520px, 80vw"
               class="h-auto max-h-full w-auto max-w-full rounded-xl shadow-lg ring-1 ring-zinc-950/5"
             />
           </div>
