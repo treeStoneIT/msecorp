@@ -7,3 +7,10 @@ updates:
       time: '03:00'
     open-pull-requests-limit: 10
     versioning-strategy: increase
+    ignore:
+      # vite-ssg 28 bundles @unhead/vue ^2; v3 strips prerendered head tags
+      - dependency-name: '@unhead/vue'
+        update-types: ['version-update:semver-major']
+      # vite-ssg 28 peers beasties ^0.3.5; 0.x minors break npm ci
+      - dependency-name: 'beasties'
+        update-types: ['version-update:semver-major', 'version-update:semver-minor']
