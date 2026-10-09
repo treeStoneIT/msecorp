@@ -26,12 +26,11 @@
         s.src = 'https://www.googletagmanager.com/gtag/js?id=G-0ZF7BYJ1BE';
         document.head.appendChild(s);
       }
+      ['scroll', 'pointerdown', 'keydown', 'touchstart', 'mousemove'].forEach(function (e) {
+        window.addEventListener(e, loadGtag, { once: true, passive: true });
+      });
       window.addEventListener('load', function () {
-        if ('requestIdleCallback' in window) {
-          requestIdleCallback(loadGtag, { timeout: 3000 });
-        } else {
-          setTimeout(loadGtag, 3000);
-        }
+        setTimeout(loadGtag, 8000);
       });
     </script>
   </head>
