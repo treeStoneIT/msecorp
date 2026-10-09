@@ -58,7 +58,7 @@ const related = computed(() => products.filter((p) => p.slug !== product.slug).s
             <RouterLink to="/products" class="text-base/7 font-semibold text-zinc-950 sm:text-sm/6">All products <span aria-hidden="true">&rarr;</span></RouterLink>
           </div>
         </div>
-        <SiteImage :slug="product.image.slug" :alt="product.image.alt" eager sizes="(min-width: 1024px) 600px, 100vw" class="aspect-[4/3] w-full rounded-3xl bg-zinc-100 object-contain p-8 sm:p-10 outline-1 -outline-offset-1 outline-black/5" />
+        <SiteImage :slug="product.image.slug" :alt="product.image.alt" eager sizes="(min-width: 1024px) 600px, 85vw" class="aspect-[4/3] w-full rounded-3xl bg-zinc-100 object-contain p-8 sm:p-10 outline-1 -outline-offset-1 outline-black/5" />
       </div>
     </div>
   </section>
@@ -91,7 +91,7 @@ const related = computed(() => products.filter((p) => p.slug !== product.slug).s
       <h2 class="text-3xl font-semibold tracking-tight text-balance text-zinc-950">Examples</h2>
       <ul v-if="product.gallery.length" role="list" class="mt-10 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
         <li v-for="photo in product.gallery" :key="photo.slug">
-          <SiteImage :slug="photo.slug" :alt="photo.alt" sizes="(min-width: 1024px) 300px, 50vw" class="aspect-square w-full rounded-2xl bg-zinc-100 object-contain p-4 outline-1 -outline-offset-1 outline-black/5" />
+          <SiteImage :slug="photo.slug" :alt="photo.alt" sizes="(min-width: 1024px) 300px, 45vw" class="aspect-square w-full rounded-2xl bg-zinc-100 object-contain p-4 outline-1 -outline-offset-1 outline-black/5" />
         </li>
       </ul>
       <div v-if="samples.length" class="mt-16">
@@ -123,7 +123,7 @@ const related = computed(() => products.filter((p) => p.slug !== product.slug).s
       <h2 class="text-3xl font-semibold tracking-tight text-balance text-zinc-950">Other products</h2>
       <ul role="list" class="mt-10 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-3">
         <li v-for="item in related" :key="item.slug" class="group relative">
-          <SiteImage :slug="item.image.slug" sizes="(min-width: 640px) 33vw, 100vw" class="aspect-[3/2] w-full rounded-2xl bg-zinc-100 object-contain p-6 outline-1 -outline-offset-1 outline-black/5" />
+          <SiteImage :slug="item.image.slug" sizes="(min-width: 640px) 33vw, 85vw" class="aspect-[3/2] w-full rounded-2xl bg-zinc-100 object-contain p-6 outline-1 -outline-offset-1 outline-black/5" />
           <h3 class="mt-6 text-lg/7 font-semibold text-zinc-950">
             <RouterLink :to="`/${item.slug}`"><span class="absolute inset-0"></span>{{ item.name }}</RouterLink>
           </h3>

@@ -11,6 +11,22 @@
   [headers.values]
     Permissions-Policy = "interest-cohort=()"
 
+# Hashed build assets and self-hosted fonts are immutable
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
 [[redirects]]
   from = "https://msecorp.ca"
   to = "https://modernsign.ca"
