@@ -17,7 +17,7 @@
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.10",
     "@vitejs/plugin-vue": "^6.0.6",
-    "beasties": "^0.3.5",
+    "beasties": "^0.5.4",
     "tailwindcss": "^4.1.10",
     "vite": "^8.0.12",
     "vite-plugin-sitemap": "^0.8.2"
